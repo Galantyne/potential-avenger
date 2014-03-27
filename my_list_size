@@ -1,0 +1,17 @@
+#include <stdlib.h>
+#include "/* your .h file path */"
+
+int     my_list_size(t_list *begin)
+{
+  int   i;
+  
+  i = 1;
+  while (begin->next != NULL)
+    {
+      begin = begin->next;
+      i = i + 1;
+    }
+  return (i);
+}
+
+/* don't forget your Makefile ! */
