@@ -1,0 +1,23 @@
+#include <stdlib.h>
+#include "/* path of your .h file */"
+
+t_list    *my_params_in_list(int ac, char **av)
+{
+  t_list  *list;
+  t_list  *tmp;
+  int     i;
+  
+  i = 0;
+  tmp = NULL;
+  while (i < ac)
+    {
+      list = malloc(sizeof(t_list));
+      list->data = av[i];
+      list->next = tmp;
+      tmp = list;
+      i = i + 1;
+    }
+  return (tmp);
+}
+
+/* don't forget your Makefile */ 
